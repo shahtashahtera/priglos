@@ -7,10 +7,41 @@
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Georgia', serif;
       background: #fff8f0;
       color: #333;
       text-align: center;
+    }
+    .section {
+      scroll-snap-align: start;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px;
+      box-sizing: border-box;
+    }
+
+    .header-section {
+      background-image: url('bg.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+    }
+    .header-section h1 {
+      font-size: 3em;
+      margin: 0;
+    }
+
+    .couple-photo {
+      width: 250px;
+      height: 350px;
+      border-radius: 20px;
+      object-fit: cover;
+      margin-bottom: 20px;
     }
     header {
       background: #ffebe7;
@@ -56,40 +87,23 @@
 <body>
 
   <header>
-    <h1>Алексей & Марина</h1>
+    <h1>Дорогие друзья и близкие!</h1>
     <p>Приглашаем вас на нашу свадьбу!</p>
-    <div class="countdown" id="countdown"></div>
-    <p>🗓 10 августа 2025<br>📍 Загородный клуб "Росинка", Подмосковье</p>
-    <button onclick="alert('Спасибо за подтверждение!')">Подтвердить участие</button>
-  </header>
-
+   
+    <p>04.10.2025</p>
+   
+  
   <section class="section">
     <h2>Программа дня</h2>
     <div class="program-card">
-      <p><strong>15:00</strong> — Сбор гостей</p>
-      <p><strong>16:00</strong> — Церемония</p>
-      <p><strong>17:00</strong> — Ужин и праздничная программа</p>
-      <p><strong>22:00</strong> — Танцы и фейерверк</p>
+      <p><strong>13:00</strong> — Сбор гостей около ЗАГСа Тракторозаводского района по адресу ул. Менжинского, д.11</p>
+      <p><strong>13:30</strong> — Торжественная регистрация</p>
+      <p><strong>14:30</strong> — Трансфер до ресторана</p>
+      <p><strong>15:30</strong> — Праздничный ужин в ресторане <br> ресторан Max, р.п. Городище, ул. Пролетарская, д.10а</p>
     </div>
   </section>
 
-  <script>
-    // Countdown timer
-    const weddingDate = new Date("2025-08-10T15:00:00").getTime();
-    const countdown = document.getElementById("countdown");
-
-    setInterval(() => {
-      const now = new Date().getTime();
-      const distance = weddingDate - now;
-
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-
-      countdown.innerHTML = `До свадьбы осталось: ${days} дн ${hours} ч ${minutes} мин`;
-    }, 1000);
-  </script>
+  
 
 </body>
 </html>
-
